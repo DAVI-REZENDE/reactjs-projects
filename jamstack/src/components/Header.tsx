@@ -82,8 +82,8 @@ export function Header() {
                 </div>
               </div>
               <div className="hidden md:flex md:space-x-10">
-                {navigation.map((item) => (
-                  <Link href={item.href}>
+                {navigation.map((item, index) => (
+                  <Link key={index} href={item.href}>
                     <a key={item.name} className="font-medium text-gray-500 hover:text-gray-900">
                       {item.name}
                     </a>
